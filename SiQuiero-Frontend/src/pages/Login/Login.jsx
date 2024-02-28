@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import '../Login/Login.css'
-
+import {login} from '../../services/authService'
+import { useNavigate } from 'react-router-dom'
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -34,18 +35,26 @@ export default function Login() {
   };
 
   const [email, setEmail] = useState('')
-
+  console.log(email)
   const handleEmail = (event) => {
     setEmail(event.target.value)
-    console.log(email)
   }
 
   const [password, setPassword] = useState('')
-
+  console.log(password)
   const handlePassword = (event) => {
     setPassword(event.target.value)
-    console.log(password)
   }
+
+  const navigate = useNavigate()
+  const onLogin = async()=>{
+    try{
+      const loginResponse = await login({email, password})
+    }catch(error){
+
+    }
+  }
+
   return (
     <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">
@@ -96,6 +105,7 @@ export default function Login() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              onClick={onLogin}
             >
               Login
             </Button>
