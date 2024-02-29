@@ -1,51 +1,62 @@
 import React, { useState } from 'react'
-import {login} from '../../services/authService'
+import {signup} from '../../services/authService'
 import { Button, Card, CardActions, CardContent, CardHeader, Divider, TextField } from '@mui/material'
-import { useNavigate, Link} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
-function LoginCard() {
+function SignupCard() {
     const navigate = useNavigate()
+    const [name, setName] = useState('')
+    const [surname, setSurName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
   
-    const onLogin = async () => {
-    const {result}  = await login({ email, password })
+    const onSignup = async () => {
+    const result  = await signup({ name, surname, email, password })
       localStorage.setItem('token', result.token)
-      localStorage.setItem('role', result.role)
-  
+        
       navigate('/home')
     }
   
     return (
       <Card sx={{ maxWidth: '500px' }}>
-        <CardHeader title="Login" />
+        <CardHeader title="Signup" />
         <CardContent>
-          <TextField
+        <TextField
+            onChange={(e) => setName(e.target.value)}
+            label="Name"
+            variant="outlined"
+            fullWidth={true}
+            sx={{ marginBottom: '20px' }}
+        />
+        <TextField
+            onChange={(e) => setSurName(e.target.value)}
+            label="Surname"
+            variant="outlined"
+            fullWidth={true}
+            sx={{ marginBottom: '20px' }}
+        />
+        <TextField
             onChange={(e) => setEmail(e.target.value)}
             label="Email"
             variant="outlined"
             fullWidth={true}
             sx={{ marginBottom: '20px' }}
-          />
-          <TextField
+        />
+        <TextField
             onChange={(e) => setPassword(e.target.value)}
             label="Password"
             variant="outlined"
             fullWidth={true}
-          />
+        />
         </CardContent>
         <Divider />
         <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <Link to ='/signup'>
-            <button>Register</button>
-            </Link>
-          <Button onClick={onLogin} color="success">
-            Login
+          <Button onClick={onSignup} color="success">
+            Signup
           </Button>
         </CardActions>
       </Card>
     )
   }
   
-  export default LoginCard
-
+  export default SignupCard
