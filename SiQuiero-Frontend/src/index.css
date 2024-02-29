@@ -82,3 +82,16 @@ button:focus-visible {
 .caja{
   overflow: hidden;
 }
+
+.centrado{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p{
+  font-size: 18px;
+  font-family: "serenity", sans-serif;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
