@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {login} from '../../services/authService'
 import { Button, Card, CardActions, CardContent, CardHeader, Divider, TextField } from '@mui/material'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link} from 'react-router-dom'
 
 function LoginCard() {
     const navigate = useNavigate()
@@ -9,12 +9,16 @@ function LoginCard() {
     const [password, setPassword] = useState('')
   
     const onLogin = async () => {
-      const { result } = await login({ email, password })
-  
+    const {result}  = await login({ email, password })
       localStorage.setItem('token', result.token)
       localStorage.setItem('role', result.role)
-  
-      navigate('/home')
+      //para admin o user
+      if (localStorage.getItem('role') === "admin") {
+        return navigate('/home')
+      } else {
+        return navigate('/portada')
+      }
+      
     }
   
     return (
@@ -37,7 +41,9 @@ function LoginCard() {
         </CardContent>
         <Divider />
         <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <Button>Register</Button>
+          <Link to ='/signup'>
+            <button>Register</button>
+            </Link>
           <Button onClick={onLogin} color="success">
             Login
           </Button>
