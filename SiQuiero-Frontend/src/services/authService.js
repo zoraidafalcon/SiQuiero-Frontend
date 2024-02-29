@@ -1,4 +1,4 @@
-import { api } from './config'
+import api from '../services/config'
 
 export const login = async(loginData) => {
   try {

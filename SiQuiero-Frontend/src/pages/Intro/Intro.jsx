@@ -8,7 +8,6 @@ function Intro() {
     <>
     <h1>Intro</h1>
     
-    <Button variant="contained">Hello world</Button>
     <Link to='/login'>
     <button>Ir a login</button>
     </Link>
