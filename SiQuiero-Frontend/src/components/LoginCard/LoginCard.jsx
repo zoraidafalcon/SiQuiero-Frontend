@@ -12,8 +12,13 @@ function LoginCard() {
     const {result}  = await login({ email, password })
       localStorage.setItem('token', result.token)
       localStorage.setItem('role', result.role)
-  
-      navigate('/home')
+      //para admin o user
+      if (localStorage.getItem('role') === "admin") {
+        return navigate('/home')
+      } else {
+        return navigate('/portada')
+      }
+      
     }
   
     return (
