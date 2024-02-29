@@ -1,12 +1,12 @@
 import React from 'react'
-import '../Welcome/Welcome.css'
+import './Intro.css'
 import { Link } from 'react-router-dom'
 import Button from '@mui/material/Button';
-function Welcome() {
+function Intro() {
 
   return (
     <>
-    <h1>Welcome</h1>
+    <h1>Intro</h1>
     
     <Button variant="contained">Hello world</Button>
     <Link to='/login'>
@@ -16,4 +16,4 @@ function Welcome() {
   )
 }
 
-export default Welcome
+export default Intro
