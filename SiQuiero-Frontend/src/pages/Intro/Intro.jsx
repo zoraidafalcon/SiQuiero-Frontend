@@ -1,18 +1,31 @@
 import React from 'react'
 import './Intro.css'
 import { Link } from 'react-router-dom'
-import Button from '@mui/material/Button';
+import { Container } from '@mui/material';
 function Intro() {
 
   return (
-    <>
+    <div className='intro relative caja'>
+      <div className="padre_imagen absolute">
+      <div className="imagen"></div>
+      <div className="filtro_color absolute"></div>
+      </div>
+
+      <section className='section_intro relative'>
+      <Container>
+
+        <div className="logotipo">
+          <img src="logo.png" alt="" />
+        </div>
+    
     <h1>Intro</h1>
     
-    <Button variant="contained">Hello world</Button>
     <Link to='/login'>
-    <button>Ir a login</button>
+    <button>sí quiero</button>
     </Link>
-    </>
+    </Container>
+    </section>
+    </div>
   )
 }
 

@@ -1,0 +1,44 @@
+/* ---------------
+--- Page INTRO ---
+---------------- */
+
+.intro{
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+}
+
+.padre_imagen{
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+
+.padre_imagen .imagen{
+    width: 100%;
+    height: 100%;
+    background-image: url('/fondo_intro.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.filtro_color{
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color:var(--transparencia);
+}
+
+.section_intro{
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.logotipo img{
+    height: 200px;
+}
