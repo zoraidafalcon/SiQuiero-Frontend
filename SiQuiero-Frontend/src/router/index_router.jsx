@@ -5,11 +5,15 @@ import Login from '../pages/Login/Login'
 const router = createBrowserRouter([
   {
     path: '/',
+    element: <Intro/>
+  },
+  {
+    path: '/',
     element: <App/>,
     children : [
       {
         path: '/',
-        element: <Intro/> 
+        element: <Intro/>
       },
       {
         path: '/login',
