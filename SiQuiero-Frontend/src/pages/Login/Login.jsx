@@ -91,6 +91,7 @@ function Login() {
         </Grid>
       </Grid>
 
+
       <div className="lateral centrado">
       <div>
       <h1>¡Maravilloso!</h1>

@@ -36,7 +36,7 @@ function Intro() {
           </p>
 
           <p>
-            ¿Quíeres empezar a planificar tu boda?
+          <span>¿Quíeres disfrutar organizando tu boda?</span> 
           </p>
 
 
