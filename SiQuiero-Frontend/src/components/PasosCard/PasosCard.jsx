@@ -13,7 +13,7 @@ function PasosCard() {
     const onWedding = async () => {
     const result = await wedding({ persona1, persona2, date, place })
     
-    navigate('/paso2')
+    navigate('/invitacion')
     }
   
     return (
