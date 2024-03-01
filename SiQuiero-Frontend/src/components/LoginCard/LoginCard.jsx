@@ -10,6 +10,7 @@ function LoginCard() {
   
     const onLogin = async () => {
     const {result}  = await login({ email, password })
+        console.log(result)
       localStorage.setItem('token', result.token)
       localStorage.setItem('role', result.role)
       //para admin o user
