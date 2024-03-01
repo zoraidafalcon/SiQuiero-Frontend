@@ -1,0 +1,91 @@
+/* ---------------
+--- Page LOGIN ---
+---------------- */
+
+.login{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: red; */
+}
+
+.header_login{
+width: 100vw;
+height: 200px;
+border: 1px solid red;
+text-align: center;
+}
+
+.header_login img{
+  height: 100px;
+    }
+
+.row_login{
+    width: 100vw!important;
+    height: calc(100vh - 200px);
+    background-color: red;
+    margin: 0!important;
+    padding: 5px;
+}
+
+.row_login .colm{
+    padding: 5px!important;
+    border: 1px solid blueviolet;
+}
+
+.row_login .colm.colm_galeria{
+display: inline-block!important;
+padding: 0px!important;
+line-height: 0px;
+}
+
+.colm_galeria:first-child .caja_doble{
+    margin-bottom: 10px;
+}
+
+.espacio{
+    margin: 0px;
+    border: 0px;
+}
+
+.caja_doble{
+    width: 100%;
+height: calc(50% - 10px);
+display: inline-flex;
+/* border: 1px solid black; */
+}
+
+
+.foto{
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+}
+
+.row_login .padre_imagen{
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+
+/* .row_login .caja_doble .padre_imagen{
+   margin: 5px;
+} */
+
+.row_login .padre_imagen .imagen{
+    width: 100%;
+    height: 100%;
+    background-image: url('/fondo_intro.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.row_login .filtro_color{
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color:var(--transparencia);
+}

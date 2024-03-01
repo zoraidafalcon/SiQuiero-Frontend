@@ -1,33 +1,34 @@
 import React, { useState } from 'react'
-
-import { Card, CardActions, CardContent, CardHeader, Divider, TextField } from '@mui/material'
-import { useNavigate, Link} from 'react-router-dom'
+import {wedding} from '../../services/wedding'
+import { Button, Card, CardActions, CardContent, CardHeader, Divider, TextField } from '@mui/material'
+import { useNavigate} from 'react-router-dom'
 
 function PasosCard() {
-    // const navigate = useNavigate()
-    // const [email, setEmail] = useState('')
-    // const [password, setPassword] = useState('')
+    const navigate = useNavigate()
+    const [persona1, setPersona1] = useState('')
+    const [persona2, setPersona2] = useState('')
+    const [date, setDate] = useState('')
+    const [place, setPlace] = useState('')
   
-    // const onLogin = async () => {
-    // const {result}  = await login({ email, password })
-    //   localStorage.setItem('token', result.token)
-    //   localStorage.setItem('role', result.role)
-    //   navigate('/paso2')
-    // }
+    const onWedding = async () => {
+    const result = await wedding({ persona1, persona2, date, place })
+    
+    navigate('/paso2')
+    }
   
     return (
       <Card sx={{ maxWidth: '500px' }}>
       <CardHeader title="Mi boda" />
       <CardContent>
         <TextField
-          onChange={(e) => setPerson1(e.target.value)}
+          onChange={(e) => setPersona1(e.target.value)}
           label="Mi nombre es ..."
           variant="outlined"
           fullWidth={true}
           sx={{ marginBottom: '20px' }}
         />
         <TextField
-          onChange={(e) => setPerson2(e.target.value)}
+          onChange={(e) => setPersona2(e.target.value)}
           label="El nombre de mi pareja es ..."
           variant="outlined"
           fullWidth={true}
@@ -50,9 +51,9 @@ function PasosCard() {
       </CardContent>
       <Divider />
       <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-      <Link to ='/paso3'>
-            <button>Crear invitacion</button>
-            </Link>
+          <Button onClick={onWedding} color="success">
+            crear invitacion
+          </Button>
       </CardActions>
     </Card>
     

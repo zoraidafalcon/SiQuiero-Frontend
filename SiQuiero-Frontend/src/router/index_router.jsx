@@ -20,7 +20,6 @@ const router = createBrowserRouter([
         return null
       }
     }
-
   },
   {
     path: '/portada',
@@ -31,7 +30,7 @@ const router = createBrowserRouter([
       } else {
         return null
       }
-  }
+    }
   },
   {
     path: '/pasos',
