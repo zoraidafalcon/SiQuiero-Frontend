@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {signup} from '../../services/authService'
-import { Button, Card, CardActions, CardContent, CardHeader, Divider, TextField } from '@mui/material'
-import { useNavigate } from 'react-router-dom'
+import { Button, Card, CardActions, CardContent, TextField } from '@mui/material'
+import { useNavigate, Link } from 'react-router-dom'
 
 function SignupCard() {
     const navigate = useNavigate()
@@ -19,41 +19,44 @@ function SignupCard() {
   
     return (
       <Card sx={{ maxWidth: '500px' }}>
-        <CardHeader title="Signup" />
         <CardContent>
         <TextField
             onChange={(e) => setName(e.target.value)}
             label="Name"
-            variant="outlined"
+            variant="standard"
             fullWidth={true}
             sx={{ marginBottom: '20px' }}
         />
         <TextField
             onChange={(e) => setSurName(e.target.value)}
             label="Surname"
-            variant="outlined"
+            variant="standard"
             fullWidth={true}
             sx={{ marginBottom: '20px' }}
         />
         <TextField
             onChange={(e) => setEmail(e.target.value)}
             label="Email"
-            variant="outlined"
+            variant="standard"
             fullWidth={true}
             sx={{ marginBottom: '20px' }}
         />
         <TextField
             onChange={(e) => setPassword(e.target.value)}
             label="Password"
-            variant="outlined"
+            variant="standard"
             fullWidth={true}
         />
         </CardContent>
-        <Divider />
+
         <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
           <Button onClick={onSignup} color="success">
             Signup
           </Button>
+
+          <Link to="/login">
+            <button className="hvr_horizontal">Registrarme</button>
+          </Link>
         </CardActions>
       </Card>
     )

@@ -48,8 +48,6 @@ function LoginCard() {
 
         <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
           
-          
-          
           {/* <Button  color="success">
             Login
           </Button> */}
