@@ -83,7 +83,7 @@ import "./Signup.css";
         
           {/* imagen 7 */}
           <div className="foto fderecha">
-            <div className="padre_imagen relative">
+            <div className="padre_imagen relative animacion">
               <div className="imagen galeria7"></div>
               <div className="filtro_color absolute"></div>
             </div>
