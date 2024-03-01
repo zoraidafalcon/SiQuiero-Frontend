@@ -50,9 +50,10 @@ function SignupCard() {
         </CardContent>
 
         <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-       
+          
         <button onClick={onSignup} className="hvr_horizontal">Registrarme</button>
      
+
         </CardActions>
       </Card>
     )
