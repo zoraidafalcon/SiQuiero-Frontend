@@ -84,6 +84,7 @@ padding-left: 5px;
     top: 0px;
     left: 0px;
     z-index: 0;
+    overflow: hidden;
 }
 
 /* .row_login .caja_doble .padre_imagen{
@@ -97,6 +98,12 @@ padding-left: 5px;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    transform: scale(1);
+    transition: all 300ms linear!important;
+    -webkit-transition: all 300ms linear!important;
+    -moz-transition: all 300ms linear!important;
+    -ms-transition: all 300ms linear!important;
+    -o-transition: all 300ms linear!important;
 }
 
 .row_login .padre_imagen .imagen.galeria1{
@@ -126,6 +133,16 @@ padding-left: 5px;
 .row_login .padre_imagen .imagen.galeria7{
     background-image: url('/galeria7.jpeg');
 }
+
+.row_login .padre_imagen:hover .imagen{
+   transform: scale(1.2);
+   transition: all 300ms linear!important;
+   -webkit-transition: all 300ms linear!important;
+   -moz-transition: all 300ms linear!important;
+   -ms-transition: all 300ms linear!important;
+   -o-transition: all 300ms linear!important;
+}
+
 
 .row_login .filtro_color{
     width: 100%;

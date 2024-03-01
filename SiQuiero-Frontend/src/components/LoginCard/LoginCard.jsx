@@ -13,7 +13,6 @@ function LoginCard() {
         console.log(result)
       localStorage.setItem('token', result.token)
       localStorage.setItem('role', result.role)
-
          
       //para admin o user
       if (localStorage.getItem('role') === "admin") {
