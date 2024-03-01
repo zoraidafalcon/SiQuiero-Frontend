@@ -14,7 +14,7 @@ function SignupCard() {
     const result  = await signup({ name, surname, email, password })
       localStorage.setItem('token', result.token)
         
-      navigate('/login')
+      navigate('/pasos')
     }
   
     return (

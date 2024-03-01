@@ -12,7 +12,7 @@ export const login = async(loginData) => {
 
 export const signup = async (signupData) => {
   try{
-    const data = await api.post('/auth/signup', signupData)
+    const {data}= await api.post('/auth/signup', signupData)
     return data
   } catch (error){
     console.log(error)
