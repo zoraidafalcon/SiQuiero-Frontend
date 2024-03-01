@@ -95,3 +95,11 @@ p{
   font-weight: 500;
   margin: 0 0 10px;
 }
+
+.animacion{
+  transition: all 300ms linear!important;
+    -webkit-transition: all 300ms linear!important;
+    -moz-transition: all 300ms linear!important;
+    -ms-transition: all 300ms linear!important;
+    -o-transition: all 300ms linear!important;
+}

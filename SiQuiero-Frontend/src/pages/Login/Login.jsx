@@ -26,7 +26,7 @@ function Login() {
          
           <div className="caja_doble">
             <div className="foto">
-              <div className="padre_imagen relative">
+              <div className="padre_imagen animacion relative">
                 <div className="imagen galeria1"></div>
                 <div className="filtro_color absolute"></div>
               </div>
