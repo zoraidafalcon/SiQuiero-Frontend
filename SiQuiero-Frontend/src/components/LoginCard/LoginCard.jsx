@@ -7,12 +7,17 @@ function LoginCard() {
     const navigate = useNavigate()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-  
+    const [userId, setUserId] = useState('')
+
     const onLogin = async () => {
-    const {result}  = await login({ email, password })
+    const {result}  = await login({ email, password, userId})
         console.log(result)
       localStorage.setItem('token', result.token)
       localStorage.setItem('role', result.role)
+      localStorage.setItem('id', result.id)
+        console.log(userId)
+
+         
       //para admin o user
       if (localStorage.getItem('role') === "admin") {
         return navigate('/home')
