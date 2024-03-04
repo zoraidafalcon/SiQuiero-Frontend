@@ -1,0 +1,85 @@
+/* ---------------
+--- Page WEB BODA ---
+---------------- */
+
+.web_boda{
+    width: 100vw;
+    height: auto;
+}
+
+/* -- Section Banner -- */
+.banner{
+    width: 100%;
+    height: 600px;
+    }
+    
+    .banner .padre_imagen{
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: 0;
+    }
+    
+    .banner .padre_imagen .imagen{
+        width: 100%;
+        height: 100%;
+        background-image: url('/pareja1.1.jpg');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .banner .filtro_color{
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background-color: #daccc794;
+    }
+    
+    .texto_banner {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: calc(100% - 116px);
+    }
+    
+    .nombres_pareja{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nombres_pareja p {
+        color: #ffffff;
+        font-size: 60px;
+        margin: 0;
+        font-family: var(--familia);
+        font-weight: 700;
+    }
+    
+    .nombres_pareja p.suma {
+        font-family: var(--fam_general);
+        margin: 0 20px;
+        font-weight: 300;
+        font-size: 45px;
+    }
+    
+    .caja_magica_banner {
+        position: absolute;
+        width: 100%;
+        bottom: calc(0% - 6px);
+        left: 0px;
+        /* border: 1px solid red; */
+        overflow: hidden;
+        z-index: 2;
+    }
+    
+    .corte_cabecera {
+        position: relative;
+        /* top: 0px; */
+        width: calc(100% + 20px);
+        left: -10px;
+    }
+    

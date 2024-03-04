@@ -6,6 +6,8 @@ import Home  from '../pages/Home/Home'
 import Portada from '../pages/Portada/Portada'
 import Pasos from '../pages/Pasos/Pasos'
 import Invitacion from '../pages/Invitacion/Invitacion'
+import Ubicacion from '../pages/Ubicacion/Ubicacion'
+import Regalos from '../pages/Regalos/Regalos'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -40,6 +42,24 @@ const router = createBrowserRouter([
   {
     path: '/invitacion',
     element: <Invitacion/>,
+    // children: [
+    //   {
+    //     path: '/invitacion/ubicacion',
+    //     element: <Ubicacion/>,
+    //   },
+    //   {
+    //     path: '/invitacion/regalos',
+    //     element: <Regalos/>,
+    //   }
+    // ]
+  },
+  {
+    path: '/invitacion/ubicacion',
+    element: <Ubicacion/>,
+  },
+  {
+    path: '/invitacion/regalos',
+    element: <Regalos/>,
   },
   {
     path: '/login',
