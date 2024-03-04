@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect} from 'react'
 import {wedding} from '../../services/wedding'
 import { Button, Card, CardActions, CardContent, CardHeader, Divider, TextField } from '@mui/material'
 import { useNavigate} from 'react-router-dom'
@@ -15,6 +15,21 @@ function PasosCard() {
     
     navigate('/invitacion')
     }
+
+    useEffect(() => {
+      
+      const fetchGifts = async () => {
+          try {
+              const data = await getAllGifts()
+              setGifts(data); 
+          } catch (error) {
+              console.error('Error al obtener los regalos:', error);
+          }
+      }
+    
+      fetchGifts() 
+    }, [])
+    
   
     return (
       <Card sx={{ maxWidth: '500px' }}>
@@ -48,6 +63,9 @@ function PasosCard() {
           fullWidth={true}
           sx={{ marginBottom: '20px' }}
         />
+      <Divider/>
+      <CardContent 
+      />
       </CardContent>
       <Divider />
       <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
@@ -56,7 +74,6 @@ function PasosCard() {
           </Button>
       </CardActions>
     </Card>
-    
     )
   }
   export default PasosCard

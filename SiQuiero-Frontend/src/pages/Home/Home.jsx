@@ -1,9 +1,8 @@
-
-import React from 'react'
+import HomeCard from '../../components/HomeCard/HomeCard'
 
 function Home() {
   return (
-    <div>Home</div>
+    <HomeCard/>
   )
 }
 
