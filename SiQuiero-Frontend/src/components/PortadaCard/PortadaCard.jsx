@@ -1,6 +1,5 @@
 import React from 'react'
-
-import { Card, CardActions, CardContent, CardHeader, Divider, TextField } from '@mui/material'
+import { Card, CardActions, CardHeader, Divider} from '@mui/material'
 import { Link} from 'react-router-dom'
 
 function PortadaCard() {
@@ -10,8 +9,11 @@ function PortadaCard() {
         <CardHeader title="Portada" />
         <Divider />
         <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <Link to ='/pasos'>
+            <Link to ="/pasos">
             <button>Crear invitacion</button>
+            </Link>
+            <Link to ="/regalos">
+            <button>Ver Lista de regalos</button>
             </Link>
             <Link to ='/invitacion'>
             <button>Ver invitacion</button>

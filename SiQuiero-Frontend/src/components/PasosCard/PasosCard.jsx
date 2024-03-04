@@ -2,8 +2,8 @@ import React, { useState, useEffect} from 'react'
 import {wedding} from '../../services/wedding'
 import { Button, Card, CardActions, CardContent, CardHeader, Divider, TextField } from '@mui/material'
 import { useNavigate} from 'react-router-dom'
-import GiftCard from '../../components/GiftCard/GiftCard'
-import { getGift } from '../../services/gift'
+// import GiftCard from '../../components/GiftCard/GiftCard'
+// import { getGift } from '../../services/gift'
 
 function PasosCard() {
     const navigate = useNavigate()
@@ -11,7 +11,7 @@ function PasosCard() {
     const [persona2, setPersona2] = useState('')
     const [date, setDate] = useState('')
     const [place, setPlace] = useState('')
-    const [gifts, setGifts] = useState([])
+    // const [gifts, setGifts] = useState([])
 
     const onWedding = async () => {
     const result = await wedding({ persona1, persona2, date, place })
@@ -19,19 +19,19 @@ function PasosCard() {
     navigate('/invitacion')
     }
 
-    useEffect(()=>{
-      const getGifts = async() =>{
-        const {result} = await getGift()
-        setGifts(result)
-      }
-      getGifts()
-    }, [])
-    const giftList =() =>{
-      const result = gifts.map((gift) =>{
-        return <GiftCard gift={gift}/>
-    })
-    return result
-  }
+  //   useEffect(()=>{
+  //     const getGifts = async() =>{
+  //       const {result} = await getGift()
+  //       setGifts(result)
+  //     }
+  //     getGifts()
+  //   }, [])
+  //   const giftList =() =>{
+  //     const result = gifts.map((gift) =>{
+  //       return <GiftCard gift={gift}/>
+  //   })
+  //   return result
+  // }
    
 
 
@@ -70,13 +70,9 @@ function PasosCard() {
       <Divider/>
         <CardContent/>
         <div>
-           {/* {gifts.map(gift =>{
-            <GiftCard gift={gift}/>
-          })} */}
-          <div>
+          {/* <div>
           {giftList()}
-          </div>
-            
+          </div> */}
         </div>
         </CardContent>
       <Divider />
