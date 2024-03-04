@@ -1,0 +1,16 @@
+/* ---------------
+--- Page PORTADA ---
+---------------- */
+
+
+.header_portada {
+    width: calc(100vw - 370px);
+    height: 100px;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+.header_portada img {
+    height: 70px;
+}
+

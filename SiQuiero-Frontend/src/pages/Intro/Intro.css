@@ -5,7 +5,11 @@
 .intro{
     width: 100vw;
     height: 100vh;
-    background-color: red;
+    /* background-color: red; */
+}
+
+.intro p{
+    color: #fff;
 }
 
 .intro .padre_imagen{
@@ -61,6 +65,7 @@
 }
 
 button{
+    color: #fff;
     padding: 10px 20px;
 margin-top: 30px;
 background-color: var(--principal);
@@ -69,6 +74,10 @@ font-family: "serenity", sans-serif;
 font-family: var(--fam-general); 
 font-weight: 500;
 border: 0px;
+}
+
+button:focus, button:focus-visible {
+    outline: 0px auto -webkit-focus-ring-color;
 }
 
 /*  hvr-shutter-out-horizontal  */
