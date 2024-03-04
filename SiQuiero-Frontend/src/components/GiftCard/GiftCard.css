@@ -1,0 +1,18 @@
+.gift-card-container {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+  }
+  
+  .gift-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+  }
+  
+  .gift-image {
+    width: 100%;
+    height: auto;
+  }
+  
