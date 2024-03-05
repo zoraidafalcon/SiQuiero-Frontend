@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { wedding } from "../../services/wedding";
-import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  TextField,
-} from "@mui/material";
-import { useNavigate } from "react-router-dom";
+
+import React, { useState, useEffect, useContext} from 'react'
+import {wedding} from '../../services/wedding'
+import { Button, Card, CardActions, CardContent, TextField } from '@mui/material'
+import { useNavigate} from 'react-router-dom'
+
+import "./PasosCard.css"
+import { WeddingContext } from '../../Context/Wedding'
+
 
 import "./PasosCard.css";
 
@@ -22,8 +21,17 @@ function PasosCard() {
   const onWedding = async () => {
     const result = await wedding({ persona1, persona2, date, place });
 
-    navigate("/invitacion");
+
+    //navigate("/invitacion");
   };
+
+    const {setWedding} = useContext(WeddingContext)
+    const onWedding = async () => {
+    const result = await wedding({ persona1, persona2, date, place })
+    setWedding(result.result)
+    navigate('/regalos')
+    }
+
 
   //   useEffect(()=>{
   //     const getGifts = async() =>{
@@ -60,7 +68,6 @@ function PasosCard() {
           fullWidth={true}
           sx={{ marginBottom: "20px" }}
         />
-      </div>
 
       <TextField
         onChange={(e) => setDate(e.target.value)}
@@ -77,6 +84,7 @@ function PasosCard() {
         sx={{ marginBottom: "20px" }}
       />
 
+
       <CardActions sx={{ display: "flex", justifyContent: "flex-end" }}>
         {/* <Button onClick={onWedding} color="success">
             crear invitacion
@@ -87,6 +95,7 @@ function PasosCard() {
         </button>
       </CardActions>
       
+
       </CardContent>
     </Card>
   );

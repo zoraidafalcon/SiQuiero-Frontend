@@ -13,7 +13,7 @@ export const gift = async (giftData) => {
     }
   }
 
-  export const getGift = async () => {
+export const getGift = async () => {
     try{
       const { data } = await api.get('/gift', {
         headers: {
@@ -25,4 +25,14 @@ export const gift = async (giftData) => {
     } catch (error){
       console.log(error)
     }
+}
+
+export const addFavoriteGift = async (giftId, weddingId) => {
+  try {
+    const {data} = await api.post(`/gift/addgift/${giftId}/${weddingId}`)
+  } catch (error) {
+    console.log(error)
   }
+}
+
+

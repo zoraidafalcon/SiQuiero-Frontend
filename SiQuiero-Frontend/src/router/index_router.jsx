@@ -51,31 +51,22 @@ const router = createBrowserRouter([
   {
     path: '/invitacion',
     element: <Invitacion/>,
-    // children: [
+    children: [
     //   {
     //     path: '/invitacion/ubicacion',
     //     element: <Ubicacion/>,
     //   },
-    //   {
-    //     path: '/invitacion/regalos',
-    //     element: <Regalos/>,
-    //   }
-    // ]
+     {
+        path: '/invitacion/regalos',
+        element: <Regalos/>,
+      }
+    ]
   },
   {
     path: '/invitacion/ubicacion',
     element: <Ubicacion/>,
   },
-  {
-    path: '/invitacion/regalos',
-    element: <Regalos/>,
-    // children: [
-    //     {
-    //       path: '/invitacion/regalos/regalo',
-    //       element: <GiftCard/>,
-    //     },
-    // ]
-  },
+
   {
     path: '/login',
     element: <Login/>,

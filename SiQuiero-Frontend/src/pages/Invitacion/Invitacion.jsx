@@ -3,6 +3,7 @@ import Header from '../../components/Header/Header'
 import "./Invitacion.css";
 
 function Invitacion() {
+  
   return (
     <div className="web_boda relative">
 

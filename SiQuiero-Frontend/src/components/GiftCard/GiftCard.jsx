@@ -1,7 +1,9 @@
-import React from "react";
+
 // import PropTypes from 'prop-types';
 import "./GiftCard.css";
-
+import React, { useContext } from 'react';
+import { WeddingContext } from '../../Context/Wedding';
+import { addFavoriteGift } from '../../services/gift';
 
 
 function GiftCard({ gift }) {
@@ -24,6 +26,16 @@ function GiftCard({ gift }) {
   //     image: PropTypes.string.isRequired,
   //   }),
   // };
+  
+  const GiftCard = ( {gift} ) => {
+  const {wedding} = useContext(WeddingContext)
+
+  const handleRegalo= async()=> {
+    console.log(gift)
+    console.log(wedding)
+    const result = await addFavoriteGift(gift.id, wedding.id)
+
+  }
 
   return (
     <>
@@ -75,6 +87,8 @@ function GiftCard({ gift }) {
         </div>
         </div>
     </>
+
+  
   );
 }
 
