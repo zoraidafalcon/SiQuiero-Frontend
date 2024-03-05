@@ -8,6 +8,7 @@ function PortadaCard() {
     return (
 <>
    
+
 <div className="menu_gestion">
   
   <nav aria-label="menu_gestion_web">
@@ -38,12 +39,15 @@ function PortadaCard() {
     </ul>
   </nav>
 
+
 </div>
       <Card sx={{ maxWidth: '500px' }}>
         <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
           <Link to ='/invitacion'>
             <button className="hvr_horizontal">Ver Web de Boda</button>
+
           </Link>
+
         </CardActions>
       </Card>
 

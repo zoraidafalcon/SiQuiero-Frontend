@@ -4,10 +4,10 @@ import Header from '../../components/Header/Header'
 
 //import Grid from "@mui/material/Grid";
 
-import GiftCard from '../../components/GiftCard/GiftCard'
+// import GiftCard from '../../components/GiftCard/GiftCard'
 import { Link } from 'react-router-dom'
 import './Regalos.css'
-import GiftList from '../GiftList/GiftList'
+
 
 function pageRegalos() {
 
@@ -37,32 +37,43 @@ function pageRegalos() {
   
             </div>
           </div>
-        </div>
-  
 
-        <div className="section_regalos">
+        </div>
+
+        <div className="padre_imagen relative">
+          <div className="imagen absolute"></div>
+          <div className="filtro_color absolute"></div>
+        </div>
+
+        <div className="texto_banner centrado">
           <div className="container">
 
-            <div className="texto_inicio">
-              <h2>Lista de Regalos</h2>
+            <div className="nombres_pareja centrado">
+              <p>Adf</p>
+              <p className='suma'>&</p>
+              <p>Dfg</p>
             </div>
 
-            <Grid className="row_regalos" container spacing={2}>
-             {/* <GiftCard></GiftCard> */}
-            </Grid>
-
-            <div className="fecha_boda">
-            <p>Regalos</p>
-            <GiftCard></GiftCard>
-            </div>
           </div>
-      
         </div>
       </div>
-    )
+
+
+
+      <div className="section_regalos">
+        <div className="container">
+
+          <div className="texto_inicio">
+            <h2>Lista de Regalos</h2>
+          </div>
+
+        </div>
+
+      </div>
+      </div>
+
+
+      )
   }
-  
-  
-  export default pageRegalos
-  
-  
+
+      export default pageRegalos

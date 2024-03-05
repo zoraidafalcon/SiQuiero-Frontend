@@ -12,7 +12,10 @@ function PasosCard() {
   const [date, setDate] = useState("");
   const [place, setPlace] = useState("");
 
-    const {setWedding} = useContext(WeddingContext)
+  // const [gifts, setGifts] = useState([])
+
+   const {setWedding} = useContext(WeddingContext)
+
 
     const onWedding = async () => {
     const result = await wedding({ persona1, persona2, date, place })
@@ -57,13 +60,15 @@ function PasosCard() {
           fullWidth={true}
           sx={{ marginBottom: '20px' }}
         />
-        <CardActions sx={{ display: "flex", justifyContent: "flex-end" }}>
-          
-          <button onClick={onWedding} className="hvr_horizontal">
-            Siguiente
-          </button>
-          
-        </CardActions>
+
+
+      <CardActions sx={{ display: "flex", justifyContent: "flex-end" }}>
+        <button onClick={onWedding} className="hvr_horizontal">
+          Siguiente
+        </button>
+      </CardActions>
+      
+
       </CardContent>
     </Card>
   );

@@ -3,7 +3,7 @@ import "./GiftCard.css";
 import React, { useContext } from 'react';
 import { WeddingContext } from '../../Context/Wedding';
 import { addFavoriteGift } from '../../services/gift';
-
+import Grid from "@mui/material/Grid";
 
 function GiftCard({ gift }) {
   // const GiftCard = ( {gift} ) => {
@@ -35,11 +35,13 @@ function GiftCard({ gift }) {
     const result = await addFavoriteGift(gift.id, wedding.id)
 
   }
-}
+  }
+
 
   return (
     <>
-      <div className="col-md-4">
+      {/* <div className="col-md-4"> */}
+      <Grid className="colm" item xs={4} md={4}>
         <div className="caja_regalo">
           <div className="padre_imagen relative gift-card">
             <div
@@ -68,12 +70,7 @@ function GiftCard({ gift }) {
 
                 <div className="descripcion_precio">
                   <p className="limitar_3">
-                    Why We Love It: Unbelievable comfort without overheating,
-                    this cozy comforter is perfect for hot sleepers! However you
-                    sleep, they’ve got a comforter (new and improved, may we
-                    add) to match your needs. Snuggle up to varied levels of
-                    warmth and construction, each tucked within their
-                    ultra-soft, 100% long staple cotton shell.{" "}
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit, rhoncus non id sagittis ultrices morbi, volutpat porttitor quam mauris interdum tortor aliquet, risus elementum hendrerit litora accumsan. Cubilia quis tempor curae platea mi pulvinar bibendum sed nec, augue eros egestas pellentesque nisl quam iaculis pharetra potenti, fusce vel dis aliquet convallis parturient enim litora.{" "}
                   </p>
                   <p className="precio">{gift.price} €</p>
                   <a href="#">
@@ -84,7 +81,9 @@ function GiftCard({ gift }) {
             </div>
           </div>
         </div>
-      </div>
+
+        </Grid>
+        {/* </div> */}
     </>
   );
 }
