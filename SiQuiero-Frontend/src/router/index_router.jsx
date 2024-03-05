@@ -6,12 +6,9 @@ import Home  from '../pages/Home/Home'
 import Portada from '../pages/Portada/Portada'
 import Pasos from '../pages/Pasos/Pasos'
 import Invitacion from '../pages/Invitacion/Invitacion'
-
 import Ubicacion from '../pages/Ubicacion/Ubicacion'
 import Regalos from '../pages/Regalos/Regalos'
-
 import GiftList from '../pages/GiftList/GiftList'
-import GiftCard from '../components/GiftCard/GiftCard'
 
 const router = createBrowserRouter([
   {
@@ -52,21 +49,16 @@ const router = createBrowserRouter([
     path: '/invitacion',
     element: <Invitacion/>,
     children: [
-    //   {
-    //     path: '/invitacion/ubicacion',
-    //     element: <Ubicacion/>,
-    //   },
      {
         path: '/invitacion/regalos',
         element: <Regalos/>,
+      },
+      {
+      path: '/invitacion/ubicacion',
+      element: <Ubicacion/>,
       }
     ]
   },
-  {
-    path: '/invitacion/ubicacion',
-    element: <Ubicacion/>,
-  },
-
   {
     path: '/login',
     element: <Login/>,

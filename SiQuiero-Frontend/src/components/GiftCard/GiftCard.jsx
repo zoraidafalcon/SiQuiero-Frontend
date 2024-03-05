@@ -1,5 +1,4 @@
 
-// import PropTypes from 'prop-types';
 import "./GiftCard.css";
 import React, { useContext } from 'react';
 import { WeddingContext } from '../../Context/Wedding';
@@ -38,6 +37,7 @@ function GiftCard({ gift }) {
   }
   }
 
+
   return (
     <>
       {/* <div className="col-md-4"> */}
@@ -73,7 +73,6 @@ function GiftCard({ gift }) {
                   Lorem ipsum dolor sit amet consectetur adipiscing elit, rhoncus non id sagittis ultrices morbi, volutpat porttitor quam mauris interdum tortor aliquet, risus elementum hendrerit litora accumsan. Cubilia quis tempor curae platea mi pulvinar bibendum sed nec, augue eros egestas pellentesque nisl quam iaculis pharetra potenti, fusce vel dis aliquet convallis parturient enim litora.{" "}
                   </p>
                   <p className="precio">{gift.price} €</p>
-
                   <a href="#">
                     <button class="hvr_horizontal">Añadir</button>
                   </a>
@@ -82,12 +81,11 @@ function GiftCard({ gift }) {
             </div>
           </div>
         </div>
+
         </Grid>
         {/* </div> */}
     </>
-
-  
   );
 }
 
-export default GiftCard;
+export default GiftCard

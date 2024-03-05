@@ -7,9 +7,6 @@ function Portada() {
 
   return (
     <div className="gestion relative caja">
-
-
-
       <div className="header_portada centrado">
         <Link to="/portada">
           <div className="">
@@ -17,13 +14,10 @@ function Portada() {
           </div>
         </Link>
       </div>
-
       <div className="lateral centrado">
-
         <div className="bola_usuario centrado">
           <p>A</p>
         </div>
-
         <div>
 
           <p>Web de Boda</p>
@@ -67,15 +61,9 @@ function Portada() {
           < PortadaCard />
         </div>
       </div>
-
       <div className="simulador_web_boda">
        <Invitacion></Invitacion>
       </div>
-     
-
-
-
-
     </div>
 
   )
