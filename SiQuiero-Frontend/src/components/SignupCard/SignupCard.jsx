@@ -14,7 +14,7 @@ function SignupCard() {
     const result  = await signup({ name, surname, email, password })
       localStorage.setItem('token', result.token)
         
-      navigate('/pasos')
+      //navigate('/pasos')
     }
   
     return (
@@ -51,7 +51,7 @@ function SignupCard() {
 
         <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
           
-        <button onClick={onSignup} className="hvr_horizontal">Registrarme</button>
+        <button onClick={onSignup} href='/regalos' className="hvr_horizontal">Registrarme</button>
      
 
         </CardActions>

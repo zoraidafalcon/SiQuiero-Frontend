@@ -1,12 +1,16 @@
 
 import React from 'react'
 import Header from '../../components/Header/Header'
+
+//import Grid from "@mui/material/Grid";
+
 import GiftCard from '../../components/GiftCard/GiftCard'
 import { Link } from 'react-router-dom'
 import './Regalos.css'
 import GiftList from '../GiftList/GiftList'
 
 function pageRegalos() {
+
     return (
       <div className="web_boda relative">
   
@@ -35,17 +39,29 @@ function pageRegalos() {
           </div>
         </div>
   
-        <div className="fecha_boda">
-          <p>Regalos</p>
 
-          <GiftCard></GiftCard>
+        <div className="section_regalos">
+          <div className="container">
+
+            <div className="texto_inicio">
+              <h2>Lista de Regalos</h2>
+            </div>
+
+            <Grid className="row_regalos" container spacing={2}>
+             {/* <GiftCard></GiftCard> */}
+            </Grid>
+
+            <div className="fecha_boda">
+            <p>Regalos</p>
+            <GiftCard></GiftCard>
+            </div>
+          </div>
+      
         </div>
-  
-  
       </div>
-  
     )
   }
+  
   
   export default pageRegalos
   
