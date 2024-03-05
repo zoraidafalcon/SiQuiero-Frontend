@@ -1,6 +1,8 @@
 
 import React from 'react'
 import Header from '../../components/Header/Header'
+import Grid from "@mui/material/Grid";
+import GiftCard from '../../components/GiftCard/GiftCard'
 import { Link } from 'react-router-dom'
 import './Regalos.css'
 
@@ -33,12 +35,21 @@ function pageRegalos() {
           </div>
         </div>
   
-        <div className="fecha_boda">
-          <p>Regalos</p>
+        <div className="section_regalos">
+          <div className="container">
+
+            <div className="texto_inicio">
+              <h2>Lista de Regalos</h2>
+            </div>
+
+            <Grid className="row_regalos" container spacing={2}>
+             {/* <GiftCard></GiftCard> */}
+            </Grid>
         </div>
-  
-  
-      </div>
+        </div>
+      
+  </div>
+     
   
     )
   }

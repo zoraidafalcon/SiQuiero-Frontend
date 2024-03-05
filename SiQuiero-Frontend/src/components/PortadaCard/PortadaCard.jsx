@@ -52,16 +52,7 @@ function PortadaCard() {
          <Link to ='/invitacion'>
             <button className="hvr_horizontal">Ver Web de Boda</button>
 </Link>
-           // <Link to ="/pasos">
-            //<button>Crear invitacion</button>
-            //</Link>
-            //<Link to ="/regalos">
-            //<button>Ver Lista de regalos</button>
-            //</Link>
-            //<Link to ='/invitacion'>
-            //<button>Ver invitacion</button>
-
-            
+                     
         </CardActions>
       </Card>
 

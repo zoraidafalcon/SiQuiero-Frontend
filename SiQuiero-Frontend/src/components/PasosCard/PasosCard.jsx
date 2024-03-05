@@ -1,24 +1,29 @@
-import React, { useState, useEffect} from 'react'
-import {wedding} from '../../services/wedding'
-import { Button, Card, CardActions, CardContent, TextField } from '@mui/material'
-import { useNavigate} from 'react-router-dom'
+import React, { useState, useEffect } from "react";
+import { wedding } from "../../services/wedding";
+import {
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  TextField,
+} from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
-import "./PasosCard.css"
-
+import "./PasosCard.css";
 
 function PasosCard() {
-    const navigate = useNavigate()
-    const [persona1, setPersona1] = useState('')
-    const [persona2, setPersona2] = useState('')
-    const [date, setDate] = useState('')
-    const [place, setPlace] = useState('')
-    // const [gifts, setGifts] = useState([])
+  const navigate = useNavigate();
+  const [persona1, setPersona1] = useState("");
+  const [persona2, setPersona2] = useState("");
+  const [date, setDate] = useState("");
+  const [place, setPlace] = useState("");
+  // const [gifts, setGifts] = useState([])
 
-    const onWedding = async () => {
-    const result = await wedding({ persona1, persona2, date, place })
-    
-    navigate('/invitacion')
-    }
+  const onWedding = async () => {
+    const result = await wedding({ persona1, persona2, date, place });
+
+    navigate("/invitacion");
+  };
 
   //   useEffect(()=>{
   //     const getGifts = async() =>{
@@ -33,19 +38,17 @@ function PasosCard() {
   //   })
   //   return result
   // }
-   
 
-
-    return (
-      <Card sx={{ maxWidth: '500px' }}>
+  return (
+    <Card sx={{ maxWidth: "500px" }}>
       <CardContent>
-        <div className="nombre_parejas relative centrado">
+      <div className="nombre_parejas relative centrado">
         <TextField
           onChange={(e) => setPersona1(e.target.value)}
           label="Tu nombre"
           variant="standard"
           fullWidth={true}
-          sx={{ marginBottom: '20px' }}
+          sx={{ marginBottom: "20px" }}
         />
         <div className="union centrado">
           <p>&</p>
@@ -55,35 +58,38 @@ function PasosCard() {
           label="Nombre de tu pareja"
           variant="standard"
           fullWidth={true}
-          sx={{ marginBottom: '20px' }}
+          sx={{ marginBottom: "20px" }}
         />
-</div>
+      </div>
 
-        <TextField
-          onChange={(e) => setDate(e.target.value)}
-          label="Fecha de la Boda (dd/mm/aaaa)"
-          variant="standard"
-          fullWidth={true}
-          sx={{ marginBottom: '20px' }}
-        />
-        <TextField
-          onChange={(e) => setPlace(e.target.value)}
-          label="Lugar del enlace"
-          variant="standard"
-          fullWidth={true}
-          sx={{ marginBottom: '20px' }}
-        />
+      <TextField
+        onChange={(e) => setDate(e.target.value)}
+        label="Fecha de la Boda (dd/mm/aaaa)"
+        variant="standard"
+        fullWidth={true}
+        sx={{ marginBottom: "20px" }}
+      />
+      <TextField
+        onChange={(e) => setPlace(e.target.value)}
+        label="Lugar del enlace"
+        variant="standard"
+        fullWidth={true}
+        sx={{ marginBottom: "20px" }}
+      />
 
-      <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-          {/* <Button onClick={onWedding} color="success">
+      <CardActions sx={{ display: "flex", justifyContent: "flex-end" }}>
+        {/* <Button onClick={onWedding} color="success">
             crear invitacion
           </Button> */}
 
-          <button onClick={onWedding} className="hvr_horizontal">Siguiente</button>
-
+        <button onClick={onWedding} className="hvr_horizontal">
+          Siguiente
+        </button>
       </CardActions>
+      
+      </CardContent>
     </Card>
-    )
-  }
+  );
+}
 
-  export default PasosCard
+export default PasosCard;
