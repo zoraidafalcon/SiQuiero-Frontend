@@ -18,14 +18,8 @@ function PasosCard() {
   const [place, setPlace] = useState("");
   // const [gifts, setGifts] = useState([])
 
-  const onWedding = async () => {
-    const result = await wedding({ persona1, persona2, date, place });
+   const {setWedding} = useContext(WeddingContext)
 
-
-    //navigate("/invitacion");
-  };
-
-    const {setWedding} = useContext(WeddingContext)
     const onWedding = async () => {
     const result = await wedding({ persona1, persona2, date, place })
     setWedding(result.result)
@@ -68,7 +62,7 @@ function PasosCard() {
           fullWidth={true}
           sx={{ marginBottom: "20px" }}
         />
-
+</div>
       <TextField
         onChange={(e) => setDate(e.target.value)}
         label="Fecha de la Boda (dd/mm/aaaa)"
@@ -86,10 +80,6 @@ function PasosCard() {
 
 
       <CardActions sx={{ display: "flex", justifyContent: "flex-end" }}>
-        {/* <Button onClick={onWedding} color="success">
-            crear invitacion
-          </Button> */}
-
         <button onClick={onWedding} className="hvr_horizontal">
           Siguiente
         </button>

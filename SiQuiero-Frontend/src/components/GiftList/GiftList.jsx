@@ -6,6 +6,7 @@ import { Link , Card, CardActions, CardContent, CardHeader, Divider, TextField }
 import GiftCard from '../../components/GiftCard/GiftCard'
 import { getGift } from '../../services/gift'
 import { Route } from 'react-router-dom'
+import Grid from "@mui/material/Grid";
 
 
 function GiftList() {
@@ -35,29 +36,48 @@ function GiftList() {
     return(
 
 <>
-<div className="row_lista_regalos">
+{/* <div className="row_lista_regalos">
 {giftList()}
-</div>
+</div> */}
+ <div className="lista_regalos relative caja">
+<Grid className="row_login row_regalos" container spacing={2}>
+        {/* 1º fila */}
+        {giftList()}
+        {/* imagen 4 */}
+        {/* <Grid className="colm" item xs={3} md={3}>
+       
+        </Grid> */}
 
+        {/* <Grid className="colm" item xs={3} md={3}>
+          <div className="padre_imagen relative">
+            <div className="imagen galeria4"></div>
+            <div className="filtro_color absolute"></div>
+          </div>
+        </Grid> */}
+
+        {/* imagen 5 */}
+        {/* <Grid className="colm" item xs={3} md={3}>
+          <div className="padre_imagen relative">
+            <div className="imagen galeria5"></div>
+            <div className="filtro_color absolute"></div>
+          </div>
+        </Grid> */}
+
+        {/* <Grid className="colm" item xs={3} md={3}>
+          <div className="foto finquierda">
+            <div className="padre_imagen relative">
+              <div className="imagen galeria6"></div>
+              <div className="filtro_color absolute"></div>
+            </div>
+            </div>
+        </Grid> */}
+      </Grid>
+      </div>
 </>
       
 
-{/*<Card sx={{ maxWidth: '500px' }}>
-        <CardHeader title="Mis regalos" />
-        <CardContent>
-        <div>
-          <div>
-            {giftList()}
-          </div>
-        </div>
-        </CardContent>
-            <Divider />
-        <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <Link to='/invitacion'>
-            <button >Ver Invitación</button>
-          </Link >
-      </CardActions>
-        </Card>*/}
+
+        
 
     )
 }

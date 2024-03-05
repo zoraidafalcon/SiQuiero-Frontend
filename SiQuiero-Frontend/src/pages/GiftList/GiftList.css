@@ -1,7 +1,94 @@
 
 
 .pagina_lista_regalos{
+    width: 100vw;
+    height: 100vh;
+    /* border: 1px solid red; */
+}
+
+.header_portada {
     width: calc(100vw - 370px);
-    height: calc(100vh - 200px);
-    border: 1px solid red;
+    height: 100px;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+.pagina_lista_regalos .lateral {
+    position: fixed;
+}
+
+.section_page_regalos{
+        width: calc(100vw - 370px) !important;
+        /* height: calc(100vh - 100px); */
+        background-color: #f6eeec;
+        margin: 0 !important;
+        padding-bottom: 70px;
+}
+
+.banner_regalos{
+    width: 100%;
+    height: 300px;
+    /* background-color: red; */
+}
+
+.banner_regalos .padre_imagen {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+
+.banner_regalos .padre_imagen .imagen {
+    width: 100%;
+    height: 100%;
+    background-image: url(/pareja1.1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner_regalos .filtro_color {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: #daccc794;
+}
+
+.banner_regalos .texto_banner {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: calc(100%);
+}
+
+.banner_regalos .texto_banner .fecha_pareja {
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    font-family: var(--familia_serif);
+    margin: 0;
+    line-height: 32px;
+}
+
+.texto_inicio {
+    width: 600px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.texto_inicio h2 {
+    color: #c6acab;
+    font-size: 36px;
+    font-family: var(--familia_serif);
+    text-align: center;
+    line-height: 36px;
+    margin-bottom: 15px;
+}
+
+.texto_inicio p {
+    color: #d0aeac;
+    font-family: var(--fam_general);
 }

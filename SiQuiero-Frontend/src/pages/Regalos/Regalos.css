@@ -11,7 +11,8 @@
 
 .row_regalos {
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+
 }
 
 .grid-cols-4 {
