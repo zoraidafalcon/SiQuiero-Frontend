@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect} from 'react'
 import {wedding} from '../../services/wedding'
 import { Button, Card, CardActions, CardContent, TextField } from '@mui/material'
 import { useNavigate} from 'react-router-dom'
+
 import "./PasosCard.css"
 
 
@@ -11,13 +12,30 @@ function PasosCard() {
     const [persona2, setPersona2] = useState('')
     const [date, setDate] = useState('')
     const [place, setPlace] = useState('')
-  
+    // const [gifts, setGifts] = useState([])
+
     const onWedding = async () => {
     const result = await wedding({ persona1, persona2, date, place })
     
     navigate('/invitacion')
     }
-  
+
+  //   useEffect(()=>{
+  //     const getGifts = async() =>{
+  //       const {result} = await getGift()
+  //       setGifts(result)
+  //     }
+  //     getGifts()
+  //   }, [])
+  //   const giftList =() =>{
+  //     const result = gifts.map((gift) =>{
+  //       return <GiftCard gift={gift}/>
+  //   })
+  //   return result
+  // }
+   
+
+
     return (
       <Card sx={{ maxWidth: '500px' }}>
       <CardContent>
@@ -56,7 +74,6 @@ function PasosCard() {
           sx={{ marginBottom: '20px' }}
         />
 
-      </CardContent>
       <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
           {/* <Button onClick={onWedding} color="success">
             crear invitacion
@@ -66,7 +83,7 @@ function PasosCard() {
 
       </CardActions>
     </Card>
-    
     )
   }
+
   export default PasosCard

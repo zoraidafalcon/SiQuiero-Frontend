@@ -2,6 +2,7 @@ import PasosCard from '../../components/PasosCard/PasosCard'
 import { Link } from "react-router-dom";
 import "./Pasos.css";
 
+
 function Pasos() { 
  
  return (
