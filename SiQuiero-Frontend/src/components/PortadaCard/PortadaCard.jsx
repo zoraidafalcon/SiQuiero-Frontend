@@ -30,7 +30,7 @@ function PortadaCard() {
 
       <li role="none" >
             {/*<Link to ="/regalos">*/}
-            <a role="menuitem" href='/regalos' className="linea_roja">Lista de regalos</a>
+            <a role="menuitem" href='invitacion/regalos' className="linea_roja">Lista de regalos</a>
             {/* </Link> */}
       </li>
 

@@ -1,9 +1,10 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect, useContext} from 'react'
 import {wedding} from '../../services/wedding'
 import { Button, Card, CardActions, CardContent, TextField } from '@mui/material'
 import { useNavigate} from 'react-router-dom'
 
 import "./PasosCard.css"
+import { WeddingContext } from '../../Context/Wedding'
 
 
 function PasosCard() {
@@ -14,10 +15,11 @@ function PasosCard() {
     const [place, setPlace] = useState('')
     // const [gifts, setGifts] = useState([])
 
+    const {setWedding} = useContext(WeddingContext)
     const onWedding = async () => {
     const result = await wedding({ persona1, persona2, date, place })
-    
-    navigate('/invitacion')
+    setWedding(result.result)
+    navigate('/regalos')
     }
 
   //   useEffect(()=>{

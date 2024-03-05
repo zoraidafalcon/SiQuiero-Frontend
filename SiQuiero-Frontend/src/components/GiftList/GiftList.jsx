@@ -1,29 +1,33 @@
 import React, { useState, useEffect} from 'react'
 import { Link , Card, CardActions, CardContent, CardHeader, Divider, TextField } from '@mui/material'
-import { useNavigate} from 'react-router-dom'
 import GiftCard from '../../components/GiftCard/GiftCard'
 import { getGift } from '../../services/gift'
+import { Route } from 'react-router-dom'
 
 function GiftList() {
-    //const navigate = useNavigate()
+   
     const [gifts, setGifts] = useState([])
     
     useEffect(()=>{
         const getGifts = async() =>{
             const {result} = await getGift()
+            console.log(result)
             setGifts(result)
         }
         getGifts()
     }, [])
-    
+
     const giftList =() =>{
         const result = gifts.map((gift) =>{
-            return <GiftCard gift={gift}/>
+            return (
+            <>
+                <GiftCard gift={gift}/>
+            </>
+            )
         })
         return result
     }
     
-    //navigate('/invitacion')
     return(
         <Card sx={{ maxWidth: '500px' }}>
         <CardHeader title="Mis regalos" />
@@ -37,7 +41,7 @@ function GiftList() {
             <Divider />
         <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
           <Link to='/invitacion'>
-            <button>Crear Invitación</button>
+            <button >Ver Invitación</button>
           </Link >
       </CardActions>
         </Card>
