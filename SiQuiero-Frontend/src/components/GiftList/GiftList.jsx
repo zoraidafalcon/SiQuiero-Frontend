@@ -1,8 +1,12 @@
 import React, { useState, useEffect} from 'react'
+
+import "./GiftList.css";
+
 import { Link , Card, CardActions, CardContent, CardHeader, Divider, TextField } from '@mui/material'
 import GiftCard from '../../components/GiftCard/GiftCard'
 import { getGift } from '../../services/gift'
 import { Route } from 'react-router-dom'
+
 
 function GiftList() {
    
@@ -29,7 +33,16 @@ function GiftList() {
     }
     
     return(
-        <Card sx={{ maxWidth: '500px' }}>
+
+<>
+<div className="row_lista_regalos">
+{giftList()}
+</div>
+
+</>
+      
+
+{/*<Card sx={{ maxWidth: '500px' }}>
         <CardHeader title="Mis regalos" />
         <CardContent>
         <div>
@@ -44,7 +57,8 @@ function GiftList() {
             <button >Ver Invitación</button>
           </Link >
       </CardActions>
-        </Card>
+        </Card>*/}
+
     )
 }
 

@@ -1,0 +1,23 @@
+/* ---------------
+--- componente GIFT LIST ---
+---------------- */
+.lista_regalos{
+    width: 100%;
+    height: 300px;
+    border: 1px solid red;
+}
+
+.row_lista_regalos{
+    display: flex;
+}
+
+.row_lista_regalos:after, 
+.row_lista_regalos:before {
+    display: table;
+    content: " ";
+}
+/* .row_regalos{
+    width: 100%;
+    height: 300px;
+    border: 1px solid red;
+} */

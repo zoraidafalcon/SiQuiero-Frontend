@@ -11,6 +11,7 @@ import Ubicacion from '../pages/Ubicacion/Ubicacion'
 import Regalos from '../pages/Regalos/Regalos'
 
 import GiftList from '../pages/GiftList/GiftList'
+import GiftCard from '../components/GiftCard/GiftCard'
 
 const router = createBrowserRouter([
   {
@@ -65,10 +66,7 @@ const router = createBrowserRouter([
     path: '/invitacion/ubicacion',
     element: <Ubicacion/>,
   },
-  // {
-  //   path: '/invitacion/regalos',
-  //   element: <Regalos/>,
-  // },
+
   {
     path: '/login',
     element: <Login/>,
