@@ -1,0 +1,24 @@
+/* ---------------
+--- PASOS CARD ---
+---------------- */
+
+
+.nombre_parejas{
+ position: relative;
+    width: 100%;
+}
+
+.union {
+    /* background-color: red; */
+    width: 100px;
+    height: 100%;
+    top: 0px;
+    left: 100%;
+}
+
+.union p {
+    margin-bottom: 0px;
+    font-family: var(--familia_serif);
+    font-size: 45px;
+    margin: 0 7px;
+}

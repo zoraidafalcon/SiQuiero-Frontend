@@ -1,0 +1,68 @@
+/* ---------------
+--- Page PORTADA ---
+---------------- */
+.gestion{
+    width: 100vw;
+    height: 100%;
+}
+
+.header_portada {
+    width: calc(100vw - 370px);
+    height: 100px;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+.header_portada img {
+    height: 70px;
+}
+
+
+/* -- lateral -- */
+
+.gestion .lateral {
+    width: 370px;
+    height: 100vh;
+    background-color: #fffbf6;
+    z-index: 3;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    box-shadow: 0 5px 12px rgba(0,0,0,.2);
+    text-align: center;
+}
+
+.bola_usuario{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #6e6d6c;
+}
+
+.bola_usuario p {
+    color: #fffbf6;
+    font-size: 40px;
+    font-family: var(--fam-general);
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+
+/* -- Simulador Web de Boda */
+.simulador_web_boda{
+    position: relative;
+    width: calc(100vw - 370px);
+    height: auto;
+}
+
+.simulador_web_boda .header_web_boda {
+    position: absolute;
+}
+
+.simulador_web_boda .web_boda {
+    width: calc(100vw - 370px);
+    height: auto;
+}

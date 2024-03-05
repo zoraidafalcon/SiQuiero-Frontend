@@ -13,7 +13,7 @@ import "./Signup.css";
       </div> */}
 
       <div className="header_login centrado">
-        <Link to="/">
+        <Link to="/login">
           <div className="logo">
             <img src="logo2.png" alt="" />
           </div>
