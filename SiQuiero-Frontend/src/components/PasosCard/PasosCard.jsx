@@ -57,7 +57,7 @@ function PasosCard() {
           fullWidth={true}
           sx={{ marginBottom: '20px' }}
         />
-</div>
+        </div>
 
         <TextField
           onChange={(e) => setDate(e.target.value)}
@@ -74,14 +74,15 @@ function PasosCard() {
           sx={{ marginBottom: '20px' }}
         />
 
-      <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-          {/* <Button onClick={onWedding} color="success">
-            crear invitacion
-          </Button> */}
+        <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+            {/* <Button onClick={onWedding} color="success">
+              crear invitacion
+            </Button> */}
 
-          <button onClick={onWedding} className="hvr_horizontal">Siguiente</button>
+            <button onClick={onWedding} className="hvr_horizontal">Siguiente</button>
 
-      </CardActions>
+        </CardActions>
+      </CardContent>
     </Card>
     )
   }
