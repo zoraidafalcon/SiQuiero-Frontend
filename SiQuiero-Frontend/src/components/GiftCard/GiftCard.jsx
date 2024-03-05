@@ -1,5 +1,4 @@
 
-// import PropTypes from 'prop-types';
 import "./GiftCard.css";
 import React, { useContext } from 'react';
 import { WeddingContext } from '../../Context/Wedding';
@@ -36,6 +35,7 @@ function GiftCard({ gift }) {
     const result = await addFavoriteGift(gift.id, wedding.id)
 
   }
+}
 
   return (
     <>
@@ -76,7 +76,6 @@ function GiftCard({ gift }) {
                     ultra-soft, 100% long staple cotton shell.{" "}
                   </p>
                   <p className="precio">{gift.price} €</p>
-
                   <a href="#">
                     <button class="hvr_horizontal">Añadir</button>
                   </a>
@@ -85,11 +84,9 @@ function GiftCard({ gift }) {
             </div>
           </div>
         </div>
-        </div>
+      </div>
     </>
-
-  
   );
 }
 
-export default GiftCard;
+export default GiftCard

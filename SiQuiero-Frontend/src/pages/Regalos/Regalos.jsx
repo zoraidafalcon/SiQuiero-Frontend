@@ -10,6 +10,7 @@ import './Regalos.css'
 import GiftList from '../GiftList/GiftList'
 
 function pageRegalos() {
+
     return (
       <div className="web_boda relative">
   
@@ -50,19 +51,17 @@ function pageRegalos() {
              {/* <GiftCard></GiftCard> */}
             </Grid>
 
-        //<div className="fecha_boda">
-          //<p>Regalos</p>
-
-          //<GiftCard></GiftCard>
-
-        </div>
-        </div>
+            <div className="fecha_boda">
+            <p>Regalos</p>
+            <GiftCard></GiftCard>
+            </div>
+          </div>
       
-  </div>
-     
-  
+        </div>
+      </div>
     )
   }
+  
   
   export default pageRegalos
   

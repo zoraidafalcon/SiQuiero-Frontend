@@ -25,47 +25,25 @@ function PortadaCard() {
       </li>
         
       <li role="none">
-        <a role="menuitem" className="linea_roja">Configuración</a>
+        <a role="menuitem" href='pasos' className="linea_roja">Configuración</a>
       </li>
 
       <li role="none" >
-            {/*<Link to ="/regalos">*/}
-            <a role="menuitem" href='invitacion/regalos' className="linea_roja">Lista de regalos</a>
-            {/* </Link> */}
+            <a role="menuitem" href='regalos' className="linea_roja">Lista de regalos</a>
       </li>
 
       <li role="none">
         <a role="menuitem" className="linea_roja">Actividad</a>
       </li>
-     
     </ul>
   </nav>
-  
+
 </div>
-
       <Card sx={{ maxWidth: '500px' }}>
-       
         <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-
-         
           <Link to ='/invitacion'>
             <button className="hvr_horizontal">Ver Web de Boda</button>
-
-</Link>
-                     
-
-        
-           {/* <Link to ="/pasos">
-           <button>Crear invitacion</button>
-            </Link>
-            <Link to ="/regalos">
-            <button>Ver Lista de regalos</button>
-            </Link>
-            <Link to ='/invitacion'>
-            <button>Ver invitacion</button> */}
-
-            
-
+          </Link>
         </CardActions>
       </Card>
 
