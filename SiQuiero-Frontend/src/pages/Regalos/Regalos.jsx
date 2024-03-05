@@ -1,8 +1,10 @@
 
 import React from 'react'
 import Header from '../../components/Header/Header'
+import GiftCard from '../../components/GiftCard/GiftCard'
 import { Link } from 'react-router-dom'
 import './Regalos.css'
+import GiftList from '../GiftList/GiftList'
 
 function pageRegalos() {
     return (
@@ -35,6 +37,8 @@ function pageRegalos() {
   
         <div className="fecha_boda">
           <p>Regalos</p>
+
+          <GiftCard></GiftCard>
         </div>
   
   

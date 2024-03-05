@@ -50,25 +50,25 @@ const router = createBrowserRouter([
   {
     path: '/invitacion',
     element: <Invitacion/>,
-    // children: [
+    children: [
     //   {
     //     path: '/invitacion/ubicacion',
     //     element: <Ubicacion/>,
     //   },
-    //   {
-    //     path: '/invitacion/regalos',
-    //     element: <Regalos/>,
-    //   }
-    // ]
+     {
+        path: '/invitacion/regalos',
+        element: <Regalos/>,
+      }
+    ]
   },
   {
     path: '/invitacion/ubicacion',
     element: <Ubicacion/>,
   },
-  {
-    path: '/invitacion/regalos',
-    element: <Regalos/>,
-  },
+  // {
+  //   path: '/invitacion/regalos',
+  //   element: <Regalos/>,
+  // },
   {
     path: '/login',
     element: <Login/>,

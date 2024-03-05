@@ -1,16 +1,21 @@
 import { Outlet } from 'react-router-dom'
 import './App.css'
-import Header from './components/Header'
-
+// import Header from './components/Header'
+import router from './router/index_router.jsx'
+import {RouterProvider} from 'react-router-dom'
+import { WeddingContext } from './Context/Wedding.js'
+import { useState } from 'react'
 
 function App() {
-  // const [count, setCount] = useState('')
+  const [wedding, setWedding] = useState([])
 
   return (
     <>
-      <Header></Header>
-      <Outlet/>
-      <h1>Footer</h1>
+      <WeddingContext.Provider value={{wedding, setWedding}}>
+
+        <RouterProvider router={router} />
+      </WeddingContext.Provider>
+
     </>
   )
 }
