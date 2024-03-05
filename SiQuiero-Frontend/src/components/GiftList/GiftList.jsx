@@ -24,13 +24,10 @@ function GiftList() {
                 <GiftCard gift={gift}/>
             </>
             )
-
-
         })
         return result
     }
     
-    //navigate('/invitacion')
     return(
         <Card sx={{ maxWidth: '500px' }}>
         <CardHeader title="Mis regalos" />
@@ -44,7 +41,7 @@ function GiftList() {
             <Divider />
         <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
           <Link to='/invitacion'>
-            <button >Crear Invitación</button>
+            <button >Ver Invitación</button>
           </Link >
       </CardActions>
         </Card>
