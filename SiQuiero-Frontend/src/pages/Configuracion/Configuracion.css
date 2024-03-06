@@ -1,0 +1,63 @@
+/* ---------------
+--- Page PASOS ---
+---------------- */
+
+.pasos{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: red; */
+}
+
+.main_pasos{
+    width: calc(100% - 370px);
+    height: calc(100% - 200px);
+    /* border: 2px solid red; */
+}
+
+.simuladores {
+    padding-bottom: 50px;
+}
+
+.simulador_web {
+    width: 550px;
+    height: 310px;
+    border: 5px solid #d0aeac;
+    border-radius: 14px;
+    box-shadow: 2px 2px 5px -1px #b8b8b8;
+}
+
+.simulador_movil {
+    width: 150px;
+    height: 310px;
+    border: 5px solid #d0aeac;
+    border-radius: 14px;
+    top: 50px;
+    right: -50px;
+    box-shadow: 2px 2px 5px -1px #b8b8b8;
+}
+
+.simuladores .padre_imagen{
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.simuladores .padre_imagen .imagen{
+    width: 100%;
+    height: 100%;
+    background-image: url('/simuladorweb.jpg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.simuladores .simulador_movil .padre_imagen .imagen{
+    background-image: url('/simuladormovil.jpg');
+}
+
+.configuracion .boton_registro {
+    display: none;
+}

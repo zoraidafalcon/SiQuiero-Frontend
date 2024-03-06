@@ -1,6 +1,7 @@
 import InvitacionCard from '../../components/InvitacionCard/InvitacionCard'
 import Header from '../../components/Header/Header'
 import "./Invitacion.css";
+import Footer from '../../components/Footer/Footer';
 
 function Invitacion() {
   
@@ -23,16 +24,16 @@ function Invitacion() {
           <div className="container">
 
             <div className="nombres_pareja centrado">
-              <p>Adf</p>
+              <p>Silvia</p>
               <p className='suma'>&</p>
-              <p>Dfg</p>
+              <p>Jesús</p>
             </div>
 
           </div>
         </div>
       </div>
 
-    <InvitacionCard/>
+    <Footer></Footer>
     </div>
   )
 }
