@@ -26,7 +26,7 @@ function muestraGiftList() {
       <div className="lateral centrado">
 
         <div className="bola_usuario centrado">
-          <p>A</p>
+          <p>S</p>
         </div>
 
         <div>

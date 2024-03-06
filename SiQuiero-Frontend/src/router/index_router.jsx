@@ -10,6 +10,9 @@ import Ubicacion from '../pages/Ubicacion/Ubicacion'
 import Regalos from '../pages/Regalos/Regalos'
 import GiftList from '../pages/GiftList/GiftList'
 import Configuracion from '../pages/Configuracion/Configuracion'
+import Design from '../pages/Design/Design'
+import Paginas from '../pages/Paginas/Paginas'
+import Actividad from '../pages/Actividad/Actividad'
 
 const router = createBrowserRouter([
   {
@@ -79,6 +82,18 @@ const router = createBrowserRouter([
   {
     path: '/configuracion',
     element: <Configuracion/> 
+  },
+  {
+    path: '/diseno',
+    element: <Design/> 
+  },
+  {
+    path: '/paginas',
+    element: <Paginas/> 
+  },
+  {
+    path: '/actividad',
+    element: <Actividad/> 
   }
 
 ])

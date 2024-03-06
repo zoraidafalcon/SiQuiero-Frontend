@@ -19,9 +19,9 @@ function BannerInterior() {
           <div class="texto_banner centrado">
             <div class="container">
               <div class="nombres_pareja centrado">
-                <p>Adf</p>
+                <p>Silvia</p>
                 <p class="suma">&amp;</p>
-                <p>Dfg</p>
+                <p>Jesús</p>
               </div>
 
               <p className='fecha_pareja'>25 de Enero de 2025</p>
