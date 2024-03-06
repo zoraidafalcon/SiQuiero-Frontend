@@ -7,15 +7,13 @@ import Grid from "@mui/material/Grid";
 
 function GiftCard({ gift }) {
   
-  const GiftCard = ( {gift} ) => {
+ 
   const {wedding} = useContext(WeddingContext)
 
   const handleRegalo= async()=> {
-    console.log(gift)
-    console.log(wedding)
+   console.log(wedding)
     const result = await addFavoriteGift(gift.id, wedding.id)
 
-  }
   }
 
 
@@ -55,7 +53,7 @@ function GiftCard({ gift }) {
                   </p>
                   <p className="precio">{gift.price} €</p>
                   <a href="#">
-                    <button class="hvr_horizontal">Añadir</button>
+                    <button class="hvr_horizontal" onClick={handleRegalo}>Añadir</button>
                   </a>
                 </div>
               </div>

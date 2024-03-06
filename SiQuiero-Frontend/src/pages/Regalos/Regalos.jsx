@@ -127,6 +127,7 @@ function pageRegalos() {
               <div className="filtro_imagen absolute animacion"></div>
             </div>
 
+
             <div className="texto_imagen absolute animacion">
               <div className="padding ">
                 <div className="nombre_categoria">
@@ -170,7 +171,9 @@ function pageRegalos() {
       </div>
 
 
-      )
+      // </div>
+
+    )
   }
 
       export default pageRegalos
