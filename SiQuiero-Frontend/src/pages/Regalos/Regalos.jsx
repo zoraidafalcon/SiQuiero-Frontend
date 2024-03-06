@@ -60,20 +60,18 @@ function pageRegalos() {
 
 
 
-      <div className="section_regalos">
-        <div className="container">
+      // <div className="section_regalos">
+      //   <div className="container">
 
-          <div className="texto_inicio">
-            <h2>Lista de Regalos</h2>
-          </div>
+      //     <div className="texto_inicio">
+      //       <h2>Lista de Regalos</h2>
+      //     </div>
 
-        </div>
+      //   </div>
 
-      </div>
-      </div>
+      // </div>
 
-
-      )
+    )
   }
 
       export default pageRegalos

@@ -12,9 +12,10 @@ function SignupCard() {
   
     const onSignup = async () => {
     const result  = await signup({ name, surname, email, password })
-      localStorage.setItem('token', result.token)
+    console.log(result)
+    localStorage.setItem('token', result.result)
         
-      //navigate('/pasos')
+    navigate('/pasos')
     }
   
     return (
@@ -51,7 +52,7 @@ function SignupCard() {
 
         <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
           
-        <button onClick={onSignup} href='/regalos' className="hvr_horizontal">Registrarme</button>
+        <button onClick={onSignup} href='/pasos' className="hvr_horizontal">Registrarme</button>
      
 
         </CardActions>

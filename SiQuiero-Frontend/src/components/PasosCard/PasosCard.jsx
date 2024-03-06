@@ -12,18 +12,16 @@ function PasosCard() {
   const [date, setDate] = useState("");
   const [place, setPlace] = useState("");
 
-  // const [gifts, setGifts] = useState([])
-
    const {setWedding} = useContext(WeddingContext)
 
-
     const onWedding = async () => {
-    const result = await wedding({ persona1, persona2, date, place })
-    setWedding(result.result)
-    navigate('/regalos')
+      const result = await wedding({ persona1, persona2, date, place })
+      console.log(result)
+      await setWedding(result.result)
+      navigate('/regalos')
+    
     
     }
-
   return (
     <Card sx={{ maxWidth: "500px" }}>
       <CardContent>
