@@ -2,9 +2,9 @@
 .header_web_boda {
     width: 100%;
     height: 114px;
-    background-color: rgba(255, 251, 248, 0.40);
+    background-color: rgba(255, 251, 248, 0.50);
     border-bottom: 2px solid rgb(255 251 248 / 50%);
-    position: fixed;
+    position: absolute;
     z-index: 2;
 
     display: inline-flex;
@@ -45,7 +45,7 @@ align-items: center;
     border: 0;
 }
 
-.menu_web .menubar-navigation > li > [role="menuitem"] {
+.menu_web .menubar-navigation > li > a {
     color: #d0aeac;
     font-size: 22px;
     font-family: var(--fam_general);
@@ -56,8 +56,8 @@ align-items: center;
     font-weight: 400;
 }
 
-.menu_web .menubar-navigation > li > [role="menuitem"]:focus, 
-.menu_web .menubar-navigation > li > [role="menuitem"]:hover {
+.menu_web .menubar-navigation > li > a:focus, 
+.menu_web .menubar-navigation > li > a:hover {
     padding: 5px 5px;
     background-color: transparent;
 }
@@ -98,6 +98,11 @@ align-items: center;
 }
 
 .menu_web li.active .linea_rosa:before {
+    left: 0;
+    right: 0;
+}
+
+.menu_web li .linea_rosa.active:before {
     left: 0;
     right: 0;
 }

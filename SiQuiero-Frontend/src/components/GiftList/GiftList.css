@@ -1,6 +1,8 @@
-/* ---------------
---- componente GIFT LIST ---
----------------- */
+/* -------------
+--- componente
+--- GIFT LIST ---
+-------------- */
+
 .lista_regalos{
     width: 100%;
     height: auto;
@@ -9,6 +11,7 @@
 
 .row_regalos {
     width: 100% !important;
+    height: 100%;
     background-color: #f7eeec;
 }
 

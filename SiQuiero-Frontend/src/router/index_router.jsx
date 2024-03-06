@@ -9,6 +9,10 @@ import Invitacion from '../pages/Invitacion/Invitacion'
 import Ubicacion from '../pages/Ubicacion/Ubicacion'
 import Regalos from '../pages/Regalos/Regalos'
 import GiftList from '../pages/GiftList/GiftList'
+import Configuracion from '../pages/Configuracion/Configuracion'
+import Design from '../pages/Design/Design'
+import Paginas from '../pages/Paginas/Paginas'
+import Actividad from '../pages/Actividad/Actividad'
 
 const router = createBrowserRouter([
   {
@@ -46,18 +50,26 @@ const router = createBrowserRouter([
     element: <GiftList/>,
   },
   {
-    path: '/invitacion',
+    path: '/invitacion/info',
     element: <Invitacion/>,
-    children: [
-     {
-        path: '/invitacion/regalos',
-        element: <Regalos/>,
-      },
-      {
-      path: '/invitacion/ubicacion',
-      element: <Ubicacion/>,
-      }
-    ]
+    // children: [
+    //  {
+    //     path: '/invitacion/regalos',
+    //     element: <Regalos/>,
+    //   },
+    //   {
+    //   path: '/invitacion/ubicacion',
+    //   element: <Ubicacion/>,
+    //   }
+    // ]
+  },
+  {
+    path: '/invitacion/regalos',
+    element: <Regalos/>,
+  },
+  {
+  path: '/invitacion/ubicacion',
+  element: <Ubicacion/>,
   },
   {
     path: '/login',
@@ -66,6 +78,22 @@ const router = createBrowserRouter([
   {
     path: '/signup',
     element: <Signup/> 
+  },
+  {
+    path: '/configuracion',
+    element: <Configuracion/> 
+  },
+  {
+    path: '/diseno',
+    element: <Design/> 
+  },
+  {
+    path: '/paginas',
+    element: <Paginas/> 
+  },
+  {
+    path: '/actividad',
+    element: <Actividad/> 
   }
 
 ])

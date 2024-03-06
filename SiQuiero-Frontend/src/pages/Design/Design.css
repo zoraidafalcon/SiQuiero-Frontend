@@ -1,0 +1,39 @@
+/* ---------------
+---- WEB BODA ----
+- Pagina Diseño -
+---------------- */
+
+
+
+.header_login.mantenimiento {
+    width: calc(100vw );
+    height: 200px;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+.header_login.mantenimiento img {
+    height: 127px;
+}
+
+.main_configuracion {
+    width: 100vw;
+    height: calc(100vh - 200px);
+    background-color: #fffbf8;
+
+}
+
+.padre_mantenimiento {
+    width: calc(100% - 200px);
+    height: calc(100% - 200px);
+    position: relative;
+}
+
+.padre_mantenimiento .imagen_mantenimiento{
+    width: 100%;
+    height: 100%;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('/mantenimiento.png');
+}

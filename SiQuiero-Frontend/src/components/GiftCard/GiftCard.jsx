@@ -6,25 +6,6 @@ import { addFavoriteGift } from '../../services/gift';
 import Grid from "@mui/material/Grid";
 
 function GiftCard({ gift }) {
-  // const GiftCard = ( {gift} ) => {
-  //   console.log(gift)
-  // return (
-  //   <div className="gift-card">
-  //     <h2>Name: {gift.name}</h2>
-  //     <p>Category: {gift.category}</p>
-  //     <p>Price: {gift.price}</p>
-  //     <img src={gift.image} alt={gift.name} />
-  //   </div>
-  // );
-
-  // GiftCard.propTypes = {
-  //     gift: PropTypes.shape({
-  //     name: PropTypes.string.isRequired,
-  //     category: PropTypes.string.isRequired,
-  //     price: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-  //     image: PropTypes.string.isRequired,
-  //   }),
-  // };
   
  
   const {wedding} = useContext(WeddingContext)
@@ -39,7 +20,7 @@ function GiftCard({ gift }) {
   return (
     <>
       {/* <div className="col-md-4"> */}
-      <Grid className="colm" item xs={4} md={4}>
+      <Grid className="colm colm_regalo" item xs={4} md={4}>
         <div className="caja_regalo">
           <div className="padre_imagen relative gift-card">
             <div

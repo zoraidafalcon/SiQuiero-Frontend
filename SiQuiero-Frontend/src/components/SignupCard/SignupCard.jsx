@@ -50,7 +50,7 @@ function SignupCard() {
         />
         </CardContent>
 
-        <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+        <CardActions className='boton_registro' sx={{ display: 'flex', justifyContent: 'flex-end' }}>
           
         <button onClick={onSignup} href='/pasos' className="hvr_horizontal">Registrarme</button>
      
